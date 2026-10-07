@@ -1,4 +1,4 @@
-﻿# limo-Visionary-Archictects
+# limo-Visionary-Archictects
 
 ## 📌 1. Project Overview (M1 Focus)
 
@@ -33,11 +33,11 @@ The project is designed and developed by a group of seven collaborators assigned
 
 | Week & Dates | Milestone Goal | Role Assignments |
 | :---: | :--- | :--- |
-| **Wk 7**<br>(28 Sep – 04 Oct) | **M1:** ISA Spec & Sample Programs | **ISA Lead:** Dahraps <br> **Assembler Lead:** DonBelliiot <br> **Pipeline Lead:** GregoryHorsley <br> **Hazard Lead:** Liposo-Ranoka <br> **Interface Lead:** Matseliso20 <br> **Test Lead:** tsehlatumo-ops <br> **Scrum Lead:** THMN123 |
-| **Wk 8**<br>(05 Oct – 11 Oct) | **M2:** Simulator Design & Assembler | **ISA Lead:** DonBelliiot <br> **Assembler Lead:** GregoryHorsley <br> **Pipeline Lead:** Liposo-Ranoka <br> **Hazard Lead:** Matseliso20 <br> **Interface Lead:** tsehlatumo-ops <br> **Test Lead:** THMN123 <br> **Scrum Lead:** Dahraps |
-| **Wk 9**<br>(12 Oct – 18 Oct) | **M3:** 5-Stage Core Pipeline | **ISA Lead:** GregoryHorsley <br> **Assembler Lead:** Liposo-Ranoka <br> **Pipeline Lead:** Matseliso20 <br> **Hazard Lead:** tsehlatumo-ops <br> **Interface Lead:** THMN123 <br> **Test Lead:** Dahraps <br> **Scrum Lead:** DonBelliiot |
-| **Wk 10**<br>(19 Oct – 25 Oct) | **M4:** Hazards & Live Visuals | **ISA Lead:** Liposo-Ranoka <br> **Assembler Lead:** Matseliso20 <br> **Pipeline Lead:** tsehlatumo-ops <br> **Hazard Lead:** THMN123 <br> **Interface Lead:** Dahraps <br> **Test Lead:** DonBelliiot <br> **Scrum Lead:** GregoryHorsley |
-| **Wk 11**<br>(26 Oct – 01 Nov) | **M5:** Final Release v1.0 & Report | **ISA Lead:** Matseliso20 <br> **Assembler Lead:** tsehlatumo-ops <br> **Pipeline Lead:** THMN123 <br> **Hazard Lead:** Dahraps <br> **Interface Lead:** DonBelliiot <br> **Test Lead:** GregoryHorsley <br> **Scrum Lead:** Liposo-Ranoka |
+| **Wk 7**<br>(28 Sep – 04 Oct) | **M1:** ISA Spec & Sample Programs | **ISA Lead:** Dahraps <br> **Assembler Lead:** DonBelliiot <br> **Pipeline Lead:** GregoryHorsley <br> **Hazard Lead:** Liposo-Ranoka <br> **Interface Lead:** Matseliso20 <br> **Test Lead:** tsehlatumo-ops <br> **Scrum Lead:** Thaane Moletsane |
+| **Wk 8**<br>(05 Oct – 11 Oct) | **M2:** Simulator Design & Assembler | **ISA Lead:** DonBelliiot <br> **Assembler Lead:** GregoryHorsley <br> **Pipeline Lead:** Liposo-Ranoka <br> **Hazard Lead:** Matseliso20 <br> **Interface Lead:** tsehlatumo-ops <br> **Test Lead:** Thaane Moletsane <br> **Scrum Lead:** Dahraps |
+| **Wk 9**<br>(12 Oct – 18 Oct) | **M3:** 5-Stage Core Pipeline | **ISA Lead:** GregoryHorsley <br> **Assembler Lead:** Liposo-Ranoka <br> **Pipeline Lead:** Matseliso20 <br> **Hazard Lead:** tsehlatumo-ops <br> **Interface Lead:** Thaane Moletsane <br> **Test Lead:** Dahraps <br> **Scrum Lead:** DonBelliiot |
+| **Wk 10**<br>(19 Oct – 25 Oct) | **M4:** Hazards & Live Visuals | **ISA Lead:** Liposo-Ranoka <br> **Assembler Lead:** Matseliso20 <br> **Pipeline Lead:** tsehlatumo-ops <br> **Hazard Lead:** Thaane Moletsane <br> **Interface Lead:** Dahraps <br> **Test Lead:** DonBelliiot <br> **Scrum Lead:** GregoryHorsley |
+| **Wk 11**<br>(26 Oct – 01 Nov) | **M5:** Final Release v1.0 & Report | **ISA Lead:** Matseliso20 <br> **Assembler Lead:** tsehlatumo-ops <br> **Pipeline Lead:** Thaane Moletsane <br> **Hazard Lead:** Dahraps <br> **Interface Lead:** DonBelliiot <br> **Test Lead:** GregoryHorsley <br> **Scrum Lead:** Liposo-Ranoka |
 
 ---
 
