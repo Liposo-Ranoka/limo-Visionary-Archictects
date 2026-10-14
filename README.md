@@ -1,4 +1,4 @@
-# limo-Visionary-Archictects
+# limo-Visionary-Architects
 
 ## 📌 1. Project Overview (M1 Focus)
 
