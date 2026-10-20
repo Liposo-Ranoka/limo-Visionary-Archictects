@@ -1,0 +1,404 @@
+/* ==========================================================================
+   LIMO Studio Pro - Interactive Assembly IDE Stylesheet
+   Soft-Rounded Modern UI · Glassmorphism · Multi-Theme Engine
+   ========================================================================== */
+
+/* ---------- Base Typography & Smooth Scroll ---------- */
+:root {
+  --bg-app: #09090b;
+  --bg-panel: #18181b;
+  --bg-subpanel: #27272a;
+  --border-color: rgba(63, 63, 70, 0.5);
+  --accent-color: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.35);
+  --text-main: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --editor-line-height: 24px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  user-select: none;
+  overflow: hidden;
+}
+
+/* Allow text selection in editor, logs, and inspect areas */
+.code-textarea,
+.syntax-overlay,
+#terminalLogContainer,
+#terminalBody,
+#registersGridContainer,
+#memoryHexContainer,
+.select-text {
+  user-select: text !important;
+}
+
+/* ---------- Custom Soft-Rounded Scrollbars ---------- */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 150, 0.25);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(180, 180, 190, 0.45);
+}
+
+/* ---------- Themes Engine ---------- */
+
+/* 1. VS Code Dark Theme (Default) */
+body.theme-vscode {
+  --bg-app: #09090b;
+  --bg-panel: #18181b;
+  --bg-subpanel: #27272a;
+  --border-color: rgba(63, 63, 70, 0.6);
+  --accent-color: #3b82f6;
+}
+
+/* 2. Cyberpunk Neon Theme */
+body.theme-cyberpunk {
+  --bg-app: #070913;
+  --bg-panel: #0d1224;
+  --bg-subpanel: #151d38;
+  --border-color: rgba(0, 240, 255, 0.25);
+  --accent-color: #00f0ff;
+  --accent-glow: rgba(0, 240, 255, 0.45);
+}
+body.theme-cyberpunk header,
+body.theme-cyberpunk aside,
+body.theme-cyberpunk #sidebarPanel,
+body.theme-cyberpunk #inspectorPanel,
+body.theme-cyberpunk #terminalDrawer {
+  background-color: #0d1224 !important;
+  border-color: rgba(0, 240, 255, 0.22) !important;
+}
+body.theme-cyberpunk .bg-zinc-950,
+body.theme-cyberpunk .bg-zinc-950\/60,
+body.theme-cyberpunk .bg-zinc-950\/90 {
+  background-color: #070913 !important;
+}
+body.theme-cyberpunk .text-blue-400 {
+  color: #00f0ff !important;
+}
+body.theme-cyberpunk .bg-blue-600 {
+  background-color: #00b4d8 !important;
+}
+
+/* 3. One Dark Pro Theme */
+body.theme-onedark {
+  --bg-app: #1e222b;
+  --bg-panel: #252a34;
+  --bg-subpanel: #2d3340;
+  --border-color: rgba(62, 70, 87, 0.6);
+  --accent-color: #61afef;
+  --accent-glow: rgba(97, 175, 239, 0.35);
+}
+body.theme-onedark header,
+body.theme-onedark aside,
+body.theme-onedark #sidebarPanel,
+body.theme-onedark #inspectorPanel,
+body.theme-onedark #terminalDrawer {
+  background-color: #252a34 !important;
+  border-color: #383f4f !important;
+}
+body.theme-onedark .bg-zinc-950,
+body.theme-onedark .bg-zinc-950\/60,
+body.theme-onedark .bg-zinc-950\/90 {
+  background-color: #1e222b !important;
+}
+
+/* 4. Monokai Dark Theme */
+body.theme-monokai {
+  --bg-app: #191a16;
+  --bg-panel: #22231e;
+  --bg-subpanel: #2a2b25;
+  --border-color: rgba(78, 80, 68, 0.6);
+  --accent-color: #a6e22e;
+  --accent-glow: rgba(166, 226, 46, 0.35);
+}
+body.theme-monokai header,
+body.theme-monokai aside,
+body.theme-monokai #sidebarPanel,
+body.theme-monokai #inspectorPanel,
+body.theme-monokai #terminalDrawer {
+  background-color: #22231e !important;
+  border-color: #3b3c34 !important;
+}
+body.theme-monokai .bg-zinc-950,
+body.theme-monokai .bg-zinc-950\/60,
+body.theme-monokai .bg-zinc-950\/90 {
+  background-color: #191a16 !important;
+}
+body.theme-monokai .text-blue-400 {
+  color: #66d9ef !important;
+}
+
+/* ---------- Assembly Syntax Highlighting ---------- */
+.asm-instruction {
+  color: #60a5fa;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.asm-register {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.asm-number {
+  color: #fcd34d;
+  font-weight: 500;
+}
+
+.asm-string {
+  color: #f87171;
+}
+
+.asm-comment {
+  color: #6ee7b7;
+  opacity: 0.72;
+  font-style: italic;
+}
+
+.asm-label {
+  color: #fb923c;
+  font-weight: 700;
+}
+
+.asm-directive {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.asm-punctuation {
+  color: #94a3b8;
+}
+
+/* ---------- Code Editor & Overlay Sync ---------- */
+.editor-wrapper {
+  position: relative;
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+}
+
+.code-textarea,
+.syntax-overlay {
+  font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace !important;
+  line-height: var(--editor-line-height) !important;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  box-sizing: border-box;
+  padding: 12px !important;
+  margin: 0 !important;
+  letter-spacing: 0;
+  word-spacing: normal;
+}
+
+.code-textarea {
+  color: transparent !important;
+  caret-color: #60a5fa !important;
+  background: transparent !important;
+  resize: none !important;
+  outline: none !important;
+  border: none !important;
+  z-index: 10;
+}
+
+.code-textarea::selection {
+  background: rgba(59, 130, 246, 0.35) !important;
+  color: transparent !important;
+}
+
+.syntax-overlay {
+  z-index: 1;
+  pointer-events: none;
+  background: transparent;
+}
+
+/* Line in overlay container */
+.editor-line {
+  height: var(--editor-line-height);
+  line-height: var(--editor-line-height);
+  white-space: pre;
+  display: block;
+}
+
+/* Active debug line highlighting */
+.debug-active-line {
+  background: linear-gradient(90deg, rgba(234, 179, 8, 0.28) 0%, rgba(234, 179, 8, 0.05) 100%) !important;
+  border-left: 3px solid #eab308 !important;
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: inset 0 0 10px rgba(234, 179, 8, 0.15);
+}
+
+/* ---------- Editor Gutter & Breakpoints ---------- */
+#editorGutter {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  line-height: var(--editor-line-height);
+  user-select: none;
+}
+
+.gutter-line {
+  height: var(--editor-line-height);
+  line-height: var(--editor-line-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.gutter-line:hover {
+  color: #e4e4e7;
+}
+
+.gutter-line.gutter-active {
+  color: #facc15 !important;
+  font-weight: bold;
+}
+
+.gutter-line.gutter-active::after {
+  content: '▶';
+  position: absolute;
+  left: 4px;
+  font-size: 9px;
+  color: #facc15;
+  animation: pulse-arrow 1.2s infinite alternate;
+}
+
+@keyframes pulse-arrow {
+  from { transform: translateX(0); opacity: 0.8; }
+  to { transform: translateX(2px); opacity: 1; }
+}
+
+/* Breakpoint red circle */
+.gutter-line.has-breakpoint::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  width: 9px;
+  height: 9px;
+  background-color: #ef4444;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+  animation: pulse-bp 2s infinite;
+}
+
+@keyframes pulse-bp {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); box-shadow: 0 0 12px rgba(239, 68, 68, 1); }
+}
+
+/* ---------- Register Update Flash Animation ---------- */
+.reg-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reg-card.reg-updated {
+  animation: flash-register 1.4s ease-out;
+}
+
+@keyframes flash-register {
+  0% {
+    background-color: rgba(52, 211, 153, 0.45);
+    border-color: #34d399;
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.6);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: transparent;
+    border-color: rgba(63, 63, 70, 0.5);
+    box-shadow: none;
+    transform: scale(1);
+  }
+}
+
+/* CPU Pulse Animation */
+@keyframes pulse-cpu {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); filter: drop-shadow(0 0 4px #60a5fa); }
+}
+.animate-pulse-cpu {
+  animation: pulse-cpu 2.2s infinite ease-in-out;
+}
+
+/* ---------- Resizing Handles ---------- */
+#sidebarResizeHandle,
+#inspectorResizeHandle {
+  width: 5px;
+  transition: background-color 0.2s;
+}
+
+#terminalResizeHandle {
+  height: 5px;
+  transition: background-color 0.2s;
+}
+
+#sidebarResizeHandle:hover,
+#inspectorResizeHandle:hover,
+#terminalResizeHandle:hover,
+.resizing {
+  background-color: rgba(59, 130, 246, 0.6) !important;
+}
+
+/* ---------- Modals Glassmorphism ---------- */
+.modal-dialog {
+  animation: modal-enter 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ---------- Toast Notifications ---------- */
+.toast-msg {
+  pointer-events: auto;
+  animation: toast-slide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toast-slide {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hide scrollbar for tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
