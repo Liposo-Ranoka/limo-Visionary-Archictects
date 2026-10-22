@@ -50,6 +50,6 @@ limo-group-project/
 ├── examples/           
 ├── src/                  
 ├── tests/               
-├── AI_USE.md            
+├── AI_USE.md      
 └── README.md             
-```
+
